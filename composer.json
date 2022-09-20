@@ -1,0 +1,30 @@
+{
+    "name": "zsolt/guard-clauses",
+    "description": "Guard clauses for php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Zsolt\\GuardClauses\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zsolt\\GuardClauses\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "zsolt0005",
+            "email": "60756804+zsolt0005@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.24"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit tests"
+    }
+}
