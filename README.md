@@ -7,9 +7,9 @@ If you like or are using this project please give it a star. Thanks!
 
 ## Usage
 ```php
-function processCustomer(Customer $customer): void
+function sendEmailToCustomer(Customer $customer): void
 {
-    GuardAgainst::Null($customer, "customer");
+    GuardAgainst::null($customer->getEmail());
 
     // ...
 }
@@ -20,25 +20,28 @@ final class Customer
     private string $lastName;
     private int $age;
     private string $login;
+    private ?string $email;
 
     function __construct(
         string $firstName,
         string $lastName,
         int $age,
-        string $login
+        string $login,
+        ?string $email
     )
     {
         $this->firstName = GuardAgainst::emptyOrWhiteSpace($firstName);
         $this->lastName = GuardAgainst::emptyOrWhiteSpace($lastName);
         $this->age = GuardAgainst::negative($age);
         $this->login = GuardAgainst::match($login, "admin", "login", "You can not be an admin");
+        $this->email = $email;
     }
 }
 ```
 
 ## Supported Guard Clauses
 ```php
-GuardAgainst::Null(); // Guard against null values
+GuardAgainst::null(); // Guard against null values
 GuardAgainst::true(); // Guard against true values
 GuardAgainst::nullOrTrue(); // Guard against null or true values
 GuardAgainst::false(); // Guard against false values
