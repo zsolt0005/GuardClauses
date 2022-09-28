@@ -9,7 +9,7 @@ If you like or are using this project please give it a star. Thanks!
 ```php
 function sendEmailToCustomer(Customer $customer): void
 {
-    GuardAgainst::null($customer->getEmail());
+    $email = GuardAgainst::null($customer->getEmail());
 
     // ...
 }
