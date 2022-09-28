@@ -27,7 +27,7 @@ final class Customer
         string $lastName,
         int $age,
         string $login,
-        ?string $email
+        ?string $email = null
     )
     {
         $this->firstName = GuardAgainst::emptyOrWhiteSpace($firstName);
