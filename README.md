@@ -2,6 +2,9 @@
 A simple package with guard clause. <br>
 A [guard clause](https://deviq.com/design-patterns/guard-clause) is a software pattern that simplifies complex functions by "failing fast", checking for invalid inputs up front and immediately failing if any are found.
 
+## Installation
+```composer require zsolt/guard-clauses```
+
 ## Give a Star! ⭐
 If you like or are using this project please give it a star. Thanks!
 
